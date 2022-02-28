@@ -1,0 +1,15 @@
+Some text
+    more text
+#ifdef sym123
+    # ifdef text
+    #elif _123
+        elif text 1
+#ifndef some_sym
+# ifndef text
+#endif
+#elif _345
+    elif text 2
+#else ignored text
+    # else text
+#endif
+Some more text
