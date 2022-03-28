@@ -9,18 +9,19 @@ The parser takes each token and stuctures it into a simple nested json list.
 
 The grammar for the ifdef language:
 
-source
-: (TEXT | ifdef)*
-;
-ifdef
-: (IFDEF | IFNDEF) SYM
-source
-(ELIF SYM source)*
-(ELSE source)?
-ENDIF
-;
+source:
 
-<h1>usage</h1>
+    : (TEXT | ifdef)*
+    ;
+    ifdef
+    : (IFDEF | IFNDEF) SYM
+    source
+    (ELIF SYM source)*
+    (ELSE source)?
+    ENDIF
+    ;
+
+<h1>Usage</h1>
 
 To use the parser, run 'node parser.mjs parse data.txt'
 
